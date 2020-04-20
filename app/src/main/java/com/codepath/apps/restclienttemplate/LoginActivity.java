@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.codepath.apps.restclienttemplate.models.SampleModel;
 import com.codepath.apps.restclienttemplate.models.SampleModelDao;
@@ -44,14 +45,20 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
-		 Intent i = new Intent(this, TimelineActivity.class);
-		 startActivity(i);
+	Intent i = new Intent(this, TimelineActivity.class);
+	//Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+	startActivity(i);
 	}
+
+//	private void StartActivity(Intent i) {
+
+//	}
 
 	// OAuth authentication flow failed, handle the error
 	// i.e Display an error dialog or toast
 	@Override
 	public void onLoginFailure(Exception e) {
+		Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show();
 		e.printStackTrace();
 	}
 

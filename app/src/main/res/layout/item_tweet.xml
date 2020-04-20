@@ -2,37 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:layout_marginStart="6dp"
-    android:layout_marginTop="11dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvScreenView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvScreenName"
+        android:textStyle="bold"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@id/ivProfileImage"
-        android:text="rpandey1234" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="252dp"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        android:text="@string/dany_augustin"
+        android:maxLength="@android:integer/config_longAnimTime"/>
 
     <TextView
         android:id="@+id/tvBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvScreenView"
-        android:layout_marginStart="5dp"
+        android:layout_below="@+id/tvScreenName"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@id/ivProfileImage"
-        android:text="This is my tweet!!" />
+        android:layout_toEndOf="@+id/ivProfileImage"
+        android:text="@string/my_tweets" />
 
 </RelativeLayout>
